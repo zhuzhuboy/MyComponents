@@ -1,0 +1,29 @@
+.el-col {
+    float: left;
+    box-sizing: border-box;
+}
+
+@for $i from 0 through 24 {
+    .el-col-#{$i} {
+        width: $i/24 * 100%;
+    }
+
+    .el-col-gutter-#{$i} {
+        padding-left: ($i/2) + px;
+        padding-right: ($i/2) + px;
+    }
+
+    .el-col-offset-#{$i} {
+        margin-left: $i/24 * 100%;
+    }
+
+    .el-col-push-#{$i} {
+        position: relative;
+        left: $i/24 * 100%;
+    }
+
+    .el-col-pull-#{$i} {
+        position: relative;
+        right: $i/24 * 100%;
+    }
+}
